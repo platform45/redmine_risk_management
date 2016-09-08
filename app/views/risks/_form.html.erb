@@ -21,6 +21,7 @@
   <hr />
   <p><strong>Quantification</strong></p>
   <p><%= f.text_field :income_statement, size: 100, maxlength: 255, required: false %></p>
+  <p><%= f.text_field :balance_sheet, size: 100, maxlength: 255, required: false %></p>
   <hr />
   <p><%= f.select :probability, options_with_lower_and_highier, required: true %></p>
   <p><%= f.select :impact, options_with_lower_and_highier, required: true %></p>

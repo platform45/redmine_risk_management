@@ -56,6 +56,7 @@ class RisksControllerTest < ActionController::TestCase
                 description: 'Risk testing description',
                 controls: 'Risk testing controls',
                 income_statement: 'Risk testing income_statement',
+                balance_sheet: 'Risk testing balance_sheet',
                 probability: 2,
                 impact: 4 }
       }
@@ -70,6 +71,7 @@ class RisksControllerTest < ActionController::TestCase
               description: 'Risk testing description updated',
               controls: 'Risk testing controls updated',
               income_statement: 'Risk testing income_statement updated',
+              balance_sheet: 'Risk testing balance_sheet updated',
               probability: 3,
               impact: 2 }
     }

@@ -87,6 +87,7 @@ class RisksController < ApplicationController
                                  :description,
                                  :controls,
                                  :income_statement,
+                                 :balance_sheet,
                                  :probability,
                                  :impact,
                                  :risk_status_id)
@@ -97,7 +98,6 @@ class RisksController < ApplicationController
   end
 
   def check_project_permission
-    return unless @risk && @risk.project != @project
-    render_403
+    render_403 if @risk && @risk.project != @project
   end
 end

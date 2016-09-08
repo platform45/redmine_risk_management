@@ -1,5 +1,3 @@
-# The Risk class is responsible for managing risk and risk issues associated
-# with a project
 class Risk < ActiveRecord::Base
   unloadable
 
@@ -24,6 +22,7 @@ class Risk < ActiveRecord::Base
                   'description',
                   'controls',
                   'income_statement',
+                  'balance_sheet',
                   'probability',
                   'impact',
                   'risk_status_id'
