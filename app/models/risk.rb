@@ -21,6 +21,7 @@ class Risk < ActiveRecord::Base
   safe_attributes 'title',
                   'description',
                   'controls',
+                  'income_statement',
                   'probability',
                   'impact',
                   'risk_status_id'
