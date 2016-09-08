@@ -88,6 +88,7 @@ class RisksController < ApplicationController
                                  :controls,
                                  :income_statement,
                                  :balance_sheet,
+                                 :owner_id,
                                  :probability,
                                  :impact,
                                  :risk_status_id)

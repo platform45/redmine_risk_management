@@ -45,8 +45,14 @@
   </div>
 
   <hr />
+  <div>
+    <p><strong><%= t(:field_owner) %></strong></p>
+    <div class="wiki"><%= link_to @risk.owner, user_path(@risk.owner) if @risk.owner %></div>
+  </div>
+
+  <hr />
   <p><strong>Quantification</strong></p>
-  <table class="quantification">
+  <table class="attributes">
     <% %w{ income_statement balance_sheet }.each do |quantification| %>
       <tr>
         <td colspan='2'>
