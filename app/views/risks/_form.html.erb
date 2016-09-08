@@ -32,8 +32,8 @@
   <p><%= f.text_field :income_statement, size: 100, maxlength: 255, required: false %></p>
   <p><%= f.text_field :balance_sheet, size: 100, maxlength: 255, required: false %></p>
   <hr />
-  <p><%= f.select :probability, options_with_lower_and_highier, required: true %></p>
-  <p><%= f.select :impact, options_with_lower_and_highier, required: true %></p>
+  <p><%= f.select :probability, options_with_lower_and_higher, required: true %></p>
+  <p><%= f.select :impact, options_with_lower_and_higher, required: true %></p>
   <p><%= f.select :risk_status_id,
                   options_from_collection_for_select(@risk_statuses, :id, :name, @risk.risk_status_id || @risk_statuses.default.id),
                   required: true %></p>

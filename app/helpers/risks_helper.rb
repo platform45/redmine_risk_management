@@ -1,11 +1,12 @@
 module RisksHelper
 
-  def options_with_lower_and_highier
+  def options_with_lower_and_higher
     [
       ['1 (lower)', 1],
       ['2', 2],
       ['3', 3],
-      ['4 (higher)', 4]
+      ['4', 4],
+      ['5 (higher)', 4]
     ]
   end
 
