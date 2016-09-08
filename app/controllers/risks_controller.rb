@@ -86,6 +86,7 @@ class RisksController < ApplicationController
     params.require(:risk).permit(:title,
                                  :description,
                                  :controls,
+                                 :income_statement,
                                  :probability,
                                  :impact,
                                  :risk_status_id)

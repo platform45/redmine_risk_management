@@ -45,6 +45,19 @@
   </div>
 
   <hr />
+  <p><strong>Quantification</strong></p>
+  <table class="quantification">
+    <% %w{ income_statement }.each do |quantification| %>
+      <tr>
+        <td colspan='2'>
+          <strong><%= t("field_#{quantification}") %>:</strong>
+          <%= @risk.send(quantification) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+
+  <hr />
   <div>
     <p><strong><%= t(:field_controls)%></strong></p>
     <div class='wiki'><%= textilizable @risk, :controls %></div>

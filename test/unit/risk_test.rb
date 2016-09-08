@@ -40,8 +40,11 @@ class RiskTest < ActiveSupport::TestCase
   end
 
   test 'should be created' do
-    risk = Risk.new(title: 'Risk title', description: 'Description for Risk',
-                    controls: 'Controls for Risk', probability: 2, impact: 4,
+    risk = Risk.new(title: 'Risk title',
+                    description: 'Description for Risk',
+                    controls: 'Controls for Risk',
+                    income_statement: 'Income Statement for Risk',
+                    probability: 2, impact: 4,
                     criticality: 4, rationale: 'Monitor')
     assert risk.save
   end

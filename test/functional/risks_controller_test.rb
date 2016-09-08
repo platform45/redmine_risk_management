@@ -6,7 +6,7 @@ class RisksControllerTest < ActionController::TestCase
   def setup
     @project = projects(:projects_001)
     @risk_status = risk_statuses(:risk_statuses_001)
-    @risk    = risks(:risks_001)
+    @risk = risks(:risks_001)
   end
 
   test 'should get index' do
@@ -52,8 +52,12 @@ class RisksControllerTest < ActionController::TestCase
     assert_difference 'Risk.count' do
       post :create, {
         project_id: @project,
-        risk: { title: 'Risk testing', description: 'Risk testing description',
-                controls: 'Risk testing controls', probability: 2, impact: 4 }
+        risk: { title: 'Risk testing',
+                description: 'Risk testing description',
+                controls: 'Risk testing controls',
+                income_statement: 'Risk testing income_statement',
+                probability: 2,
+                impact: 4 }
       }
     end
     assert_redirected_to [@project, Risk.last]
@@ -63,7 +67,10 @@ class RisksControllerTest < ActionController::TestCase
     put :update, {
       project_id: @project, id: @risk,
       risk: { title: 'Risk testing updated',
-              description: 'Risk testing description updated', probability: 3,
+              description: 'Risk testing description updated',
+              controls: 'Risk testing controls updated',
+              income_statement: 'Risk testing income_statement updated',
+              probability: 3,
               impact: 2 }
     }
     assert_redirected_to [@project, @risk]
