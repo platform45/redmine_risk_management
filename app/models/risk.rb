@@ -1,5 +1,3 @@
-# The Risk class is responsible for managing risk and risk issues associated
-# with a project
 class Risk < ActiveRecord::Base
   unloadable
 
