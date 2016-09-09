@@ -1,26 +1,26 @@
-general:
-  build_dir: ..
-
 machine:
   ruby:
     version:
       2.1.9
 
-dependencies:
-  pre:
+checkout:
+  post:
+    - mkdir redmine_risk_management
+    - mv ./!(circle.yml) ./redmine_risk_management/
     - wget http://www.redmine.org/releases/redmine-3.3.0.tar.gz
     - tar -xzf redmine-3.3.0.tar.gz
     - mv redmine_risk_management redmine-3.3.0/plugins
     - cp redmine-3.3.0/config/database.yml.example redmine-3.3.0/config/database.yml
+    - mv redmine-3.3.0/* ./
 
-  override:
-    - cd redmine-3.3.0 && bundle install && rake generate_secret_token
+dependencies:
+  post:
+    - rake generate_secret_token
 
 database:
-  override:
-    - cd redmine-3.3.0 && rake db:create db:migrate redmine:plugins
+  post:
+    - rake redmine:plugins
 
 test:
   override:
-    - cd redmine-3.3.0 && rake redmine:plugins:test
-
+    - rake redmine:plugins:test
