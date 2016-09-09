@@ -10,7 +10,8 @@ checkout:
   post:
     - wget http://www.redmine.org/releases/redmine-3.3.0.tar.gz
     - tar -xzf redmine-3.3.0.tar.gz
-    - mv ../redmine_risk_management ./plugins/
+    - mkdir ./plugins/redmine_risk_management
+    - mv ../redmine_risk_management/* ./plugins/redmine_risk_management/
 
 dependencies:
   pre:
