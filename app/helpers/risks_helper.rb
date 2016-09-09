@@ -6,7 +6,7 @@ module RisksHelper
       ['2', 2],
       ['3', 3],
       ['4', 4],
-      ['5 (higher)', 4]
+      ['5 (higher)', 5]
     ]
   end
 
