@@ -1,0 +1,26 @@
+general:
+  build_dir: ..
+
+machine:
+  ruby:
+    version:
+      2.1.9
+
+dependencies:
+  pre:
+    - wget http://www.redmine.org/releases/redmine-3.3.0.tar.gz
+    - tar -xzf redmine-3.3.0
+    - mv redmine_risk_management redmine-3.3.0/plugins
+    - cp redmine-3.3.0/plugins/config/database.yml.example redmine-3.3.0/plugins/config/database.yml
+
+  override:
+    - cd redmine-3.3.0 && bundle install && rake generate_secret_token
+
+database:
+  override:
+    - cd redmine-3.3.0 && bundle exec rake db:create db:migrate redmine:plugins
+
+test:
+  override:
+    - cd redmine-3.3.0 && rake redmine:plugins:test
+
