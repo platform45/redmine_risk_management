@@ -7,6 +7,8 @@ en:
   field_income_statement: Income Statement
   field_balance_sheet: Balance Sheet
   field_owner: Owner
+  field_recovery_plan_reference: Reference
+  field_recovery_plan_issue: Issue
   field_impact: Impact
   field_probability: Probability
   field_rationale: Rationale

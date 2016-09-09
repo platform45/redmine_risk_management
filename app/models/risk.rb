@@ -10,6 +10,9 @@ class Risk < ActiveRecord::Base
   belongs_to :risk_status
   belongs_to :user
   belongs_to :owner, class_name: User, foreign_key: 'owner_id'
+  belongs_to :recovery_plan_issue,
+             class_name: Issue,
+             foreign_key: 'recovery_plan_issue_id'
   has_many :issues, dependent: :destroy
 
   validates_presence_of :title, :description
@@ -25,6 +28,8 @@ class Risk < ActiveRecord::Base
                   'income_statement',
                   'balance_sheet',
                   'owner_id',
+                  'recovery_plan_reference',
+                  'recovery_plan_issue_id',
                   'probability',
                   'impact',
                   'risk_status_id'

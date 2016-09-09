@@ -64,6 +64,22 @@
   </table>
 
   <hr />
+    <p><strong>Recovery Plan</strong></p>
+    <table class='attributes'>
+      <tr>
+        <td colspan='2'>
+          <strong><%= t('field_recovery_plan_reference') %>:</strong>
+          <%= textilizable @risk, :recovery_plan_reference %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan='2'>
+          <strong><%= t('field_recovery_plan_issue') %>:</strong>
+          <%= link_to @risk.recovery_plan_issue, issue_path(@risk.recovery_plan_issue) if @risk.recovery_plan_issue %>
+        </td>
+      </tr>
+    </table>
+  <hr />
   <div>
     <p><strong><%= t(:field_controls)%></strong></p>
     <div class='wiki'><%= textilizable @risk, :controls %></div>

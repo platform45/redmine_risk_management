@@ -89,6 +89,8 @@ class RisksController < ApplicationController
                                  :income_statement,
                                  :balance_sheet,
                                  :owner_id,
+                                 :recovery_plan_reference,
+                                 :recovery_plan_issue_id,
                                  :probability,
                                  :impact,
                                  :risk_status_id)
