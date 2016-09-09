@@ -1,5 +1,5 @@
 general:
-  build_dir: redmine-3.3.0
+  build_dir: ../redmine-3.3.0
 
 machine:
   ruby:
