@@ -16,10 +16,15 @@ checkout:
 dependencies:
   pre:
     - cp config/database.yml.example config/database.yml
+  override:
+    - bundle install
   post:
     - rake generate_secret_token
 
 database:
+  override:
+    - rake db:create db:migrate
+
   post:
     - rake redmine:plugins
 
