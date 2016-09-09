@@ -1,3 +1,6 @@
+general:
+  build_dir: redmine-3.3.0
+
 machine:
   ruby:
     version:
@@ -5,15 +8,13 @@ machine:
 
 checkout:
   post:
-    - mkdir redmine_risk_management
-    - mv ./!(circle.yml) ./redmine_risk_management/
     - wget http://www.redmine.org/releases/redmine-3.3.0.tar.gz
     - tar -xzf redmine-3.3.0.tar.gz
     - mv redmine_risk_management redmine-3.3.0/plugins
-    - cp redmine-3.3.0/config/database.yml.example redmine-3.3.0/config/database.yml
-    - mv redmine-3.3.0/* ./
 
 dependencies:
+  pre:
+    - cp config/database.yml.example config/database.yml
   post:
     - rake generate_secret_token
 
