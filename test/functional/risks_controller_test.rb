@@ -59,6 +59,8 @@ class RisksControllerTest < ActionController::TestCase
                 balance_sheet: 'Risk testing balance_sheet',
                 recovery_plan_issue_id: 1,
                 recovery_plan_reference: 'Risk testing recovery_plan_reference',
+                resolution_description: 'Risk testing resolution_description',
+                resolution_issue_id: 0,
                 owner_id: 1,
                 probability: 2,
                 impact: 4 }
@@ -77,6 +79,8 @@ class RisksControllerTest < ActionController::TestCase
               balance_sheet: 'Risk testing balance_sheet updated',
               recovery_plan_issue_id: 0,
               recovery_plan_reference: 'Risk testing recovery_plan_reference updated',
+              resolution_description: 'Risk testing resolution_description updated',
+              resolution_issue_id: 1,
               owner_id: 0,
               probability: 3,
               impact: 2 }

@@ -45,6 +45,10 @@ class RiskTest < ActiveSupport::TestCase
                     controls: 'Controls for Risk',
                     income_statement: 'Income Statement for Risk',
                     balance_sheet: 'Balance Sheet for Risk',
+                    recovery_plan_issue_id: 1,
+                    recovery_plan_reference: 'Recovery Plan Reference',
+                    resolution_description: 'Resolution Description',
+                    resolution_issue_id: 0,
                     owner_id: 1,
                     probability: 2, impact: 4,
                     criticality: 4, rationale: 'Monitor')

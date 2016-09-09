@@ -13,6 +13,9 @@ class Risk < ActiveRecord::Base
   belongs_to :recovery_plan_issue,
              class_name: Issue,
              foreign_key: 'recovery_plan_issue_id'
+  belongs_to :resolution_issue,
+             class_name: Issue,
+             foreign_key: 'resolution_issue_id'
   has_many :issues, dependent: :destroy
 
   validates_presence_of :title, :description
@@ -30,6 +33,8 @@ class Risk < ActiveRecord::Base
                   'owner_id',
                   'recovery_plan_reference',
                   'recovery_plan_issue_id',
+                  'resolution_description',
+                  'resolution_issue_id',
                   'probability',
                   'impact',
                   'risk_status_id'
