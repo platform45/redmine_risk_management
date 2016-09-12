@@ -14,9 +14,9 @@ class RiskTest < ActiveSupport::TestCase
     assert_equal attributes, risk.errors.keys.sort
   end
 
-  test 'should have numeric probability and impact between 1 and 4' do
+  test 'should have numeric probability and impact between 1 and 5' do
     @risk.probability = 0
-    @risk.impact = 5
+    @risk.impact = 6
     assert @risk.invalid?
 
     @risk.probability = 1
