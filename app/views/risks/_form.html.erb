@@ -18,6 +18,15 @@
                     class: 'wiki-edit' %>
     <%= wikitoolbar_for 'risk_controls' %>
   </p>
+  <p>
+    <%= f.label_for_field :owner, required: false %>
+    <%= f.select :owner_id, options_for_select(
+          @project.users.map { |user| [user.name, user.id] },
+          @risk.owner_id
+        ),
+        include_blank: true
+      %>
+  </p>
   <hr />
   <p><strong>Quantification</strong></p>
   <p><%= f.text_field :income_statement, size: 100, maxlength: 255, required: false %></p>
