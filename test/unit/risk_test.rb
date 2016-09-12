@@ -44,6 +44,7 @@ class RiskTest < ActiveSupport::TestCase
                     description: 'Description for Risk',
                     controls: 'Controls for Risk',
                     income_statement: 'Income Statement for Risk',
+                    balance_sheet: 'Balance Sheet for Risk',
                     probability: 2, impact: 4,
                     criticality: 4, rationale: 'Monitor')
     assert risk.save

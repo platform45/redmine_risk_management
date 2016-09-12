@@ -22,6 +22,7 @@ class Risk < ActiveRecord::Base
                   'description',
                   'controls',
                   'income_statement',
+                  'balance_sheet',
                   'probability',
                   'impact',
                   'risk_status_id'
