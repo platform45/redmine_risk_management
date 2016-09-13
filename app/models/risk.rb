@@ -20,7 +20,7 @@ class Risk < ActiveRecord::Base
 
   validates_presence_of :title, :description
   validates_numericality_of :criticality, allow_nil: true
-  validates_numericality_of :probability, :impact, greater_than: 0, less_than: 5
+  validates_numericality_of :probability, :impact, greater_than: 0, less_than: 6
   validates_inclusion_of :rationale, in: RATIONALES, allow_nil: true
 
   before_save :set_criticality_rationale
