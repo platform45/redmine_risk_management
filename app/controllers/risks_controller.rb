@@ -91,6 +91,8 @@ class RisksController < ApplicationController
                                  :owner_id,
                                  :recovery_plan_reference,
                                  :recovery_plan_issue_id,
+                                 :resolution_description,
+                                 :resolution_issue_id,
                                  :probability,
                                  :impact,
                                  :risk_status_id)

@@ -9,6 +9,8 @@ en:
   field_owner: Owner
   field_recovery_plan_reference: Reference
   field_recovery_plan_issue: Issue
+  field_resolution_description: Description
+  field_resolution_issue: Issue
   field_impact: Impact
   field_probability: Probability
   field_rationale: Rationale

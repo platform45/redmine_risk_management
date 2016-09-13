@@ -80,6 +80,22 @@
       </tr>
     </table>
   <hr />
+  <p><strong>Resolution</strong></p>
+  <table class='attributes'>
+    <tr>
+      <td colspan='2'>
+        <strong><%= t('field_resolution_description') %>:</strong>
+        <%= textilizable @risk, :resolution_description %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan='2'>
+        <strong><%= t('field_resolution_issue') %>:</strong>
+        <%= link_to @risk.resolution_issue, issue_path(@risk.resolution_issue) if @risk.resolution_issue %>
+      </td>
+    </tr>
+  </table>
+  <hr />
   <div>
     <p><strong><%= t(:field_controls)%></strong></p>
     <div class='wiki'><%= textilizable @risk, :controls %></div>

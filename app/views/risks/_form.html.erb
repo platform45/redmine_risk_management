@@ -50,6 +50,24 @@
       %>
   </p>
   <hr />
+  <p><strong>Resolution</strong></p>
+  <p>
+    <%= f.label_for_field :resolution_description, required: false %>
+    <%= f.text_area :resolution_description, cols: 60, no_label: true,
+                    rows: (@risk.resolution_description.blank? ? 10 : [[10, @risk.resolution_description.length / 50].max, 100].min),
+                    class: 'wiki-edit' %>
+    <%= wikitoolbar_for 'risk_resolution_description' %>
+  </p>
+  <p>
+    <%= f.label_for_field :resolution_issue, required: false %>
+    <%= f.select :resolution_issue_id, options_for_select(
+          @project.issues.map { |issue| [issue.subject, issue.id] },
+          @risk.resolution_issue_id
+        ),
+        include_blank: true
+      %>
+  </p>
+  <hr />
   <p><%= f.select :probability, options_with_lower_and_higher, required: true %></p>
   <p><%= f.select :impact, options_with_lower_and_higher, required: true %></p>
   <p><%= f.select :risk_status_id,
