@@ -62,12 +62,6 @@ table.risk_statuses .color {
   width: 15px;
 }
 
-#risk_form header{
-  font-size: 15px;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
 .risk .risk-status {
   line-height: 1.5em;
   margin: 0 0 20px 0;
