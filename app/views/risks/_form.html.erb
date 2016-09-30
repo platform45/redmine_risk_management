@@ -28,11 +28,11 @@
       %>
   </p>
   <hr />
-  <p><strong>Quantification</strong></p>
+  <p><header>Quantification</header></p>
   <p><%= f.text_field :income_statement, size: 100, maxlength: 255, required: false %></p>
   <p><%= f.text_field :balance_sheet, size: 100, maxlength: 255, required: false %></p>
   <hr />
-  <p><strong>Recovery Plan</strong></p>
+  <p><header>Recovery Plan</header></p>
   <p>
     <%= f.label_for_field :recovery_plan_reference, required: false %>
     <%= f.text_area :recovery_plan_reference, cols: 60, no_label: true,
@@ -50,7 +50,7 @@
       %>
   </p>
   <hr />
-  <p><strong>Resolution</strong></p>
+  <p><header>Resolution</header></p>
   <p>
     <%= f.label_for_field :resolution_description, required: false %>
     <%= f.text_area :resolution_description, cols: 60, no_label: true,
