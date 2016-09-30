@@ -11,7 +11,7 @@ module RisksHelper
   end
 
   def risk_table_columns
-    %w{ ID Title Description Probability Impact Criticality Rationale }
+    %w{ ID Title Description Controls Probability Impact Criticality Rationale }
   end
 
   def risk_linkable_columns

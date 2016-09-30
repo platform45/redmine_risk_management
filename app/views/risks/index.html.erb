@@ -38,6 +38,8 @@
                 <% else %>
                   <% if column.downcase == 'description' %>
                     <%= truncate risk.send(column.downcase), length: 200, omission: ' (...)' %>
+                  <% elsif column.downcase == 'controls' %>
+                    <%= truncate risk.send(column.downcase), length: 200, omission: ' (...)' %>
                   <% else %>
                     <%= risk.send(column.downcase) %>
                   <% end -%>

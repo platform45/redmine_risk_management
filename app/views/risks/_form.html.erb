@@ -32,9 +32,8 @@
   <p><%= f.text_field :income_statement, size: 100, maxlength: 255, required: false %></p>
   <p><%= f.text_field :balance_sheet, size: 100, maxlength: 255, required: false %></p>
   <hr />
-  <p><strong>Recovery Plan</strong></p>
+  <p><strong><%= t :field_recovery_plan_reference %></strong></p>
   <p>
-    <%= f.label_for_field :recovery_plan_reference, required: false %>
     <%= f.text_area :recovery_plan_reference, cols: 60, no_label: true,
                     rows: (@risk.recovery_plan_reference.blank? ? 10 : [[10, @risk.recovery_plan_reference.length / 50].max, 100].min),
                     class: 'wiki-edit' %>
@@ -50,9 +49,8 @@
       %>
   </p>
   <hr />
-  <p><strong>Resolution</strong></p>
+  <p><strong><%= t :field_resolution_description %></strong></p>
   <p>
-    <%= f.label_for_field :resolution_description, required: false %>
     <%= f.text_area :resolution_description, cols: 60, no_label: true,
                     rows: (@risk.resolution_description.blank? ? 10 : [[10, @risk.resolution_description.length / 50].max, 100].min),
                     class: 'wiki-edit' %>
